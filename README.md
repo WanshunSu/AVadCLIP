@@ -20,7 +20,7 @@ We extract CLIP features for XD-Violence and CCTV-Fights<sub><i>sub</i></sub> da
 
 | Benchmark | CLIP[Baidu] | CLIP | Wav2CLIP[Baidu] | Wav2CLIP | 
 | :---: | :---: | :---: | :---: | :---: |
-| XD-Violence | [Code: fbrm](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [OneDrive](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [Code: g9ju](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) | [OneDrive](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) |
+| XD-Violence | [Code: fbrm](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [OneDrive](https://drive.google.com/drive/folders/1N4C_SJowl68yYcF__T2JOdV5dNuCSE3k?usp=drive_link) | [Code: g9ju](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) | [OneDrive](https://drive.google.com/drive/folders/1BVzxEcBK8ND5Q4biRHPw6_qjVOt-167k?usp=drive_link) |
 
 
 ## Acknowledgement
