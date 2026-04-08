@@ -65,7 +65,7 @@ If you find this repo useful for your research, please consider citing our paper
 @article{wu2025avadclip,
   title={AVadCLIP: Audio-visual collaboration for robust video anomaly detection},
   author={Wu, Peng and Su, Wanshun and Pang, Guansong and Sun, Yujia and Yan, Qingsen and Wang, Peng and Zhang, Yanning},
-  journal={arXiv preprint arXiv:2504.04495},
-  year={2025}
+  journal={IEEE Transactions on Multimedia},
+  year={2026}
 }
 ```
