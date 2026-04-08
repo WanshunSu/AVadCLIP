@@ -1,7 +1,9 @@
 # AVadCLIP
+
 This is the official PyTorch implementation of our papar:
 **"AVadCLIP: Audio-Visual Collaboration for Robust Video Anomaly Detection"** in **TMM.**
-> <a href="https://scholar.google.com.hk/citations?user=QkNqUH4AAAAJ" target="_blank">Peng Wu</a>, <a href="https://github.com/WanshunSu" target="_blank">Wanshun Su</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=1ZO7pHkAAAAJ" target="_blank">Guansong Pang</a>,  <a href="https://scholar.google.com.hk/citations?user=f4aAqXYAAAAJ" target="_blank">Yujia Sun</a>, <a href="https://scholar.google.com/citations?user=BSGy3foAAAAJ" target="_blank">Qingsen Yan</a>, <a href="https://scholar.google.com.au/citations?user=aPLp7pAAAAAJ" target="_blank">Peng Wang</a>, <a href="https://teacher.nwpu.edu.cn/m/en/1999000059.html" target="_blank">Yanning Zhang</a>
+
+> <a href="https://scholar.google.com.hk/citations?user=QkNqUH4AAAAJ" target="_blank">Peng Wu</a>, <a href="https://github.com/WanshunSu" target="_blank">Wanshun Su</a>, <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=1ZO7pHkAAAAJ" target="_blank">Guansong Pang</a>, <a href="https://scholar.google.com.hk/citations?user=f4aAqXYAAAAJ" target="_blank">Yujia Sun</a>, <a href="https://scholar.google.com/citations?user=BSGy3foAAAAJ" target="_blank">Qingsen Yan</a>, <a href="https://scholar.google.com.au/citations?user=aPLp7pAAAAAJ" target="_blank">Peng Wang</a>, <a href="https://scholar.google.com/citations?user=-wzlS7QAAAAJ" target="_blank">Yanning Zhang</a>
 
 ![framework](data/framework.png)
 
@@ -11,38 +13,45 @@ This is the official PyTorch implementation of our papar:
 
 - We design an uncertainty-driven feature distillation module, which transforms deterministic estimation into probabilistic uncertainty estimation. This enables the model to capture feature distribution variance, ensuring robust anomaly detection performance even with unimodal data.
 
-- Extensive experiments on two WSVAD datasets demonstrate that our method achieves superior performance in audio-visual scenarios, while maintaining robust anomaly detection results even in audio-absent conditions. 
+- Extensive experiments on two WSVAD datasets demonstrate that our method achieves superior performance in audio-visual scenarios, while maintaining robust anomaly detection results even in audio-absent conditions.
 
 ## Training
 
 ### Setup
+
 We extract CLIP features for XD-Violence and CCTV-Fights<sub><i>sub</i></sub> datasets, and realse the features and pretrained models as follows (Note: Due to licensing restrictions, only XD-Violence features and models are released):
 
-| Benchmark | CLIP[Baidu] | CLIP | Wav2CLIP[Baidu] | Wav2CLIP | Model |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+|  Benchmark  |                          CLIP[Baidu]                          |                                                CLIP                                                 |                        Wav2CLIP[Baidu]                        |                                              Wav2CLIP                                               |                                              Model                                               |
+| :---------: | :-----------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------: |
 | XD-Violence | [Code: fbrm](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [OneDrive](https://drive.google.com/drive/folders/1N4C_SJowl68yYcF__T2JOdV5dNuCSE3k?usp=drive_link) | [Code: g9ju](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) | [OneDrive](https://drive.google.com/drive/folders/1BVzxEcBK8ND5Q4biRHPw6_qjVOt-167k?usp=drive_link) | [OneDrive](https://drive.google.com/drive/folders/1FwVnaUKBUOPKVxsc_Rx0z7Sha2lp1Gmx?usp=sharing) |
 
 The following files need to be adapted in order to run the code on your own machine:
-- Change the file paths to the download datasets above in `list/xd_CLIP_rgb.csv` and `list/xd_CLIP_rgbtest.csv`. 
+
+- Change the file paths to the download datasets above in `list/xd_CLIP_rgb.csv` and `list/xd_CLIP_rgbtest.csv`.
 - Feel free to change the hyperparameters in `xd_option.py`.
 
 ### Train and Test
-After the setup, simply run the following command: 
+
+After the setup, simply run the following command:
 Traing and infer for XD-Violence dataset:
+
 ```
 python xd_train_t.py
 python xd_test_t.py
 python xd_train_s.py
 python xd_test_s.py
 ```
+
 Traing and infer for CCTV-Fights<sub><i>sub</i></sub> dataset:
+
 ```
 python cctv_train_t.py
 python cctv_test_t.py
 python cctv_train_s.py
 python cctv_test_s.py
 ```
-Note: Here, ```t``` refers to the teacher model, and ```s``` refers to the student model.
+
+Note: Here, `t` refers to the teacher model, and `s` refers to the student model.
 
 ## Acknowledgement
 
