@@ -18,10 +18,31 @@ This is the official PyTorch implementation of our papar:
 ### Setup
 We extract CLIP features for XD-Violence and CCTV-Fights<sub><i>sub</i></sub> datasets, and realse the features and pretrained models as follows (Note: Due to licensing restrictions, only XD-Violence features and models are released):
 
-| Benchmark | CLIP[Baidu] | CLIP | Wav2CLIP[Baidu] | Wav2CLIP | 
-| :---: | :---: | :---: | :---: | :---: |
-| XD-Violence | [Code: fbrm](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [OneDrive](https://drive.google.com/drive/folders/1N4C_SJowl68yYcF__T2JOdV5dNuCSE3k?usp=drive_link) | [Code: g9ju](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) | [OneDrive](https://drive.google.com/drive/folders/1BVzxEcBK8ND5Q4biRHPw6_qjVOt-167k?usp=drive_link) |
+| Benchmark | CLIP[Baidu] | CLIP | Wav2CLIP[Baidu] | Wav2CLIP | Model |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| XD-Violence | [Code: fbrm](https://pan.baidu.com/s/1A5udw8OVzAeS8g00cui8pQ) | [OneDrive](https://drive.google.com/drive/folders/1N4C_SJowl68yYcF__T2JOdV5dNuCSE3k?usp=drive_link) | [Code: g9ju](https://pan.baidu.com/s/11KmJZhqAT83DYsckCagw3w) | [OneDrive](https://drive.google.com/drive/folders/1BVzxEcBK8ND5Q4biRHPw6_qjVOt-167k?usp=drive_link) | [OneDrive](https://drive.google.com/drive/folders/1FwVnaUKBUOPKVxsc_Rx0z7Sha2lp1Gmx?usp=sharing) |
 
+The following files need to be adapted in order to run the code on your own machine:
+- Change the file paths to the download datasets above in `list/xd_CLIP_rgb.csv` and `list/xd_CLIP_rgbtest.csv`. 
+- Feel free to change the hyperparameters in `xd_option.py`
+
+### Train and Test
+After the setup, simply run the following command: 
+Traing and infer for XD-Violence dataset
+```
+python xd_train_t.py
+python xd_test_t.py
+python xd_train_s.py
+python xd_test_s.py
+```
+Traing and infer for CCTV-Fights<sub><i>sub</i></sub> dataset
+```
+python cctv_train_t.py
+python cctv_test_t.py
+python cctv_train_s.py
+python cctv_test_s.py
+```
+Note: Here, ```t``` refers to the teacher model, and ```s``` refers to the student model.
 
 ## Acknowledgement
 
