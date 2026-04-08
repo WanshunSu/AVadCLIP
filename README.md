@@ -24,18 +24,18 @@ We extract CLIP features for XD-Violence and CCTV-Fights<sub><i>sub</i></sub> da
 
 The following files need to be adapted in order to run the code on your own machine:
 - Change the file paths to the download datasets above in `list/xd_CLIP_rgb.csv` and `list/xd_CLIP_rgbtest.csv`. 
-- Feel free to change the hyperparameters in `xd_option.py`
+- Feel free to change the hyperparameters in `xd_option.py`.
 
 ### Train and Test
 After the setup, simply run the following command: 
-Traing and infer for XD-Violence dataset
+Traing and infer for XD-Violence dataset:
 ```
 python xd_train_t.py
 python xd_test_t.py
 python xd_train_s.py
 python xd_test_s.py
 ```
-Traing and infer for CCTV-Fights<sub><i>sub</i></sub> dataset
+Traing and infer for CCTV-Fights<sub><i>sub</i></sub> dataset:
 ```
 python cctv_train_t.py
 python cctv_test_t.py
